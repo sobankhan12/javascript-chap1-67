@@ -503,3 +503,435 @@ for (var i = 1; i <= 100; i++){
     
     
 //Chapter 17-20 End...............................
+//CHAPTER 21-25
+// Q NO 1
+var firstName = prompt("Enter your first name");
+var lastName = prompt("Enter your last name");
+var fullName = firstName + lastName;
+alert(fullName);
+// Q NO 2
+var phone = prompt("Enter your mobile model");
+var length = phone.length;
+document.write("My favorite phone is:  " + phone + "<br>" + "Length of string is: " + length);
+//Q NO 3
+var string = "Pakistan";
+var index = string.indexOf("n");
+document.write("String: Pakistan" + "<br>"); 
+document.write("index of n Pakistan is : " + index+ "<br>"); 
+
+//Q NO 4
+var string = "Hello world";
+var index = string.lastIndexOf("l");
+document.write("String: Hello world" + "<br>"); 
+document.write("index of n Hello world is : " + index+ "<br>"); 
+// Q NO 5
+var string = "Pakistani";
+var character = string.charAt(3);
+document.write("String: Pakistani" + "<br>"); 
+document.write("character at 3rd index  is : " + character +"<br>");
+// Q NO 6
+var firstName = prompt("Enter your first name");
+var lastName = prompt("Enter your last name");
+var fullName = "";
+ fullName = fullName.concat(firstName," ",lastName);
+alert(fullName);
+// Q NO 7
+var city = "Hyderabad";
+var cityReplace = city.replace(city, "Islamabad");
+document.write("City :" + city + " <br>" + "After replacement : " + cityReplace);
+// Q NO 8
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+var newMessage = message.replace(/and/g, "&");
+document.write(message+"<br>");
+document.write(newMessage);
+// Q NO 9
+var value = "472";
+document.write("value: "+value + " <br>");
+document.write("value: "+typeof (value) + ": <br>");
+document.write("value: "+value + " <br>");
+value = parseInt("value: "+value);
+document.write("value: "+typeof(value) + "<br>");
+// Q NO 10
+var input = prompt("Enter any text");
+document.write("input: "+input + "<br>");
+input = input.toUpperCase();
+document.write("input: " + input);
+// Q NO 11
+var input = prompt("Enter any text");
+document.write("input: "+input + "<br>");
+var x= input.charAt(0).toUpperCase() + input.slice(1);
+document.write("input: " + x);
+// Q NO 12
+// END OF CHAPTER 21-25....................................
+// START OF CHAPTER 26-30.............................
+//  Q NO 1
+a = +prompt("Enter any positive  value: ");
+document.write("Number is: " + a+"<br>");
+document.write("Round off value is: " + Math.round(a)+"<br>");
+ document.write("Floor value is: " + Math.floor(a)+"<br>");
+ document.write("Ceil value is is: " + Math.ceil(a)+"<br>");
+// Q NO 2
+a = prompt("Enter any negative value: ");
+document.write("Number is: " + a+"<br>");
+document.write("Round off value is: " + Math.round(a)+"<br>");
+document.write("Floor value is: " + Math.floor(a)+"<br>");
+document.write("Ceil value is is: " + Math.ceil(a)+"<br>");
+// Q NO 3
+a = prompt("Enter any  value: ");
+document.write("The absolute value of " + a + "  is: " + Math.abs(a) + "<br>");
+// Q NO 4 
+document.write("random dice value is  "+Math.floor((Math.random()*6)+1)+"<br>");
+document.write("random dice value is  "+Math.floor((Math.random()*6)+1)+"<br>");
+// Q NO 5
+a = Math.floor((Math.random() * 6) + 1);
+document.write(a + "<br>");
+if (a !== 1) {
+    document.write("random coin value is:   Head"+"<br>");
+}
+else {
+    document.write("random coin value is:   Tails"+"<br>");
+}
+//Q NO 6
+document.write("random  value  between 1-100:::  " + Math.floor((Math.random() * 100) + 1) + "<br>");
+//Q NO 8
+a = Math.floor((Math.random() * 10) + 1);
+user = +prompt("Guess number between 1-10: ");
+if (a === user) {
+    alert("Happy congratulation you guess it");
+}
+else {
+    alert("Sorry Try again!");
+}
+
+//END OF CHAPTER 26-30.............................
+//Start  OF CHAPTER 31-34.............................
+//Q NO 1
+date = new Date();
+document.write(date);
+//Q NO 2
+date = new Date();
+var month = ["January", "February", "March", "April", "May", "June", "july", "August", "September", "October", "November", "December"];
+document.write("Current month is :  " + month[date.getMonth()]+"<br>");
+//Q NO 3
+date = new Date();
+var day= ["Sun","Mon","Tues","Wed","Thur","Fri","Sat"];
+document.write("Current day is :  " + day[date.getDay()] + "<br>");
+//Q NO 4
+date = new Date();
+day = date.getDay();
+if (day === 0 || day === 6) { 
+document.write("Its a Fun day :  " +"<br>");
+}
+//Q NO 5
+date = new Date();
+day = date.getDate();
+if (day<16 ) { 
+document.write("first  Fifteen days of month :  " +"<br>");
+}
+else {
+    document.write("Last  Fifteen days of month :  " +"<br>");
+}
+//Q NO 6
+var d = new Date();
+var n = d.getTime();
+document.write("Current date is: "+d +"<br>");
+document.write("elapsed  million seconds since january 1 1970 :"+n+"<br>");
+document.write("elapsed  minutes since january 1 1970 : " + n / (1000 * 60)+"<br>");
+//Q NO 7
+var d = new Date();
+var n = d.getHours();
+
+if (n > 13) {
+    
+document.write("its PM"+"<br>");
+}
+else {
+    
+document.write("its AM"+"<br>");
+}
+//Q NO 8
+var d = new Date("2020-12-31");
+document.write("Later date : " + d + "<br>");
+// Q NO 9
+var d = new Date("2015-06-18");
+
+document.write("Later date : "+d + "<br>");
+//END OF CHAPTER 31-34.............................
+//Start  OF CHAPTER 35-38.............................
+//Q NO 1
+function todayDate() {
+    date = new Date();
+    document.write(date + "<br>");
+}
+todayDate();
+//Q NO 2
+function greet(a,b) {
+    document.write("HELLO" + (a + b) + "<br>");
+}
+
+
+var firstName = prompt("Enter your first name");
+var lastName = prompt("Enter your last name");
+greet(firstName, lastName);
+//Q NO 3
+function add(a,b) {
+    document.write("sum of two number" + (a + b) + "<br>");
+}
+
+
+var a = +prompt("Enter your first number");
+var b = +prompt("Enter your second number");
+add(a, b);
+//Q NO 4
+function calculator(a, b, operator) {
+    switch (operator) {
+        case "+":
+            
+            return (document.write("sum of two number: " + (a + b) + "<br>"))
+            break;
+        case "-":
+            
+            return document.write("difference of two number: " + (a - b) + "<br>");
+            break;
+        case "*":
+            
+            return document.write("multiplication of two number: " + (a * b) + "<br>");
+            break;
+        case "/":
+            
+            return document.write("division of two number: " + (a / b) + "<br>");
+                break;
+        default:
+            return document.write("you have to enter valid operator "+"<br>");
+    }
+
+}
+
+
+var a = +prompt("Enter your first number");
+var b = +prompt("Enter your second number");
+var operator = prompt("Enter your operator +,-,*,/");
+//Q NO 5
+function square(n) {
+    document.write("square of number is : " + (n * n) + "<br>");
+} 
+var n = +prompt("Enter any number")
+square(n);
+//Q NO 6 is not cover in class
+function factorial(number) {
+    a = 1;
+    for (i = 1; i <= number; i++){
+        a *= i;
+    }
+    return a;
+    
+}
+number = +prompt("Enter any number");
+alert(factorial(number));
+//Q NO 7
+function counting(start,end) {
+    
+    for (i = start; i <= end; i++){
+        document.write(i + "<br>");
+    }
+    
+    
+}
+start = +prompt("Starting number");
+end = +prompt("Ending number");
+document.write("counting start from  " + start + " to " + end);
+counting(start, end);
+//Q NO 8
+function Hypotenuse(base, per) {
+    a = base;
+    b = per;
+    function square(base, per) {
+       return((base*base)+(per*per))
+    }     
+    hypo = square();
+    document.write(hypo);
+
+
+}
+base = +prompt("Enter base number");
+per = +prompt("Enter perpendicular number");
+Hypotenuse(start, end);
+
+
+
+
+
+
+// END   OF CHAPTER 35-38.............................
+// ..................... START CHAPTER 38-42..................
+// Q NO 1
+var a = prompt('Enter the value of a');
+var b= prompt('Enter the Power of a');
+document.write("the answer is  " + (Math.pow(a, b)))
+//Q NO 2
+var year = prompt('Enter the year ');
+var message=""
+if (year % 4 == 0) {
+    if (year % 100 == 0) {
+        if (year % 400 == 0) {
+            message="yes this year is leap year"
+            
+        }
+    }
+    
+}
+else {
+    message="Sorry this year is not leap year"
+    
+}
+document.write(message);
+//Q NO 3
+document.write("AREA OF triangle")
+var a =+ prompt('Enter the value of a');
+var b= +prompt('Enter the value of b');
+var c = +prompt('Enter the value of c');
+function sum(a, b, c) {
+    return( ( a + b + c ) / 2)
+}
+var S = sum(a, b, c);
+function Area(S) {
+    return(S*(S-a)*(S-b)*(S-c)
+    )
+}
+document.write("Area of triangle is : " + Area(S))
+//Q NO 4
+var a =+ prompt('Enter the marks of English');
+var b =+ prompt('Enter the marks of Urdu');
+var c =+ prompt('Enter the marks of Math');
+function mainFunction(a, b, c) {
+    console.log(a,b,c)
+    var aver=average(a,b,c);
+    var percent = percentage(a,b,c);
+    document.write("You average score are : "+aver+"</br>")
+    document.write("You percentage is : "+percent+"</br>")
+    
+}
+function average(a, b, c) {
+
+    return(((a+b+c)/3))
+}
+function percentage(a, b, c) {
+    console.log(((a+b+c)/300)*100)
+    return(((a+b+c)/300)*100)
+}
+mainFunction(a,b,c)
+//Q NO 5
+var str = prompt("Enter any string that you want:");
+document.write(str + "<br>")
+var search=prompt("ENter the character that you want search this string")
+function index(str, search) {
+    for (var i = 0; i < str.length; i++){
+        if (search == str[i]) {
+            document.write("index of " + search + " is : " + (i))
+            break;
+        }
+    }
+    
+    
+}
+index(str,search)
+//Q NO 6
+var a = prompt("Enter any sentence and i will remove all vowels from sentence");
+document.write("The original sentence is " + " : " + a + " <br>");
+var update = "";
+
+for (var i = 0; i < a.length; i++){
+    if (a[i] == "o" || a[i]=="O" || a[i]=="i" || a[i]=='I' || a[i] == "a" || a[i]=="A" || a[i]=="e" || a[i]=='E' || a[i] == "u" || a[i]=="U"  ) {
+        
+        console.log('')
+    }
+    else {
+        
+        update += a[i];
+    }
+}
+document.write("after removal of vowels "+" : "+update);
+
+
+//..................... END CHAPTER 38-42..................
+
+
+//..................... START OF CHAPTER 43-48..................
+//Q NO 4
+function changImg() {
+    var change = document.getElementById('lion');
+    change.src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/E0F0/production/_112548575_gettyimages-492611032-1.jpg"
+}
+function previousImg() {
+    var change = document.getElementById('lion');
+    change.src="https://cdn.mos.cms.futurecdn.net/J9KeYkEZf4HHD5LRGf799N.jpg"
+}
+//Q NO 5
+function increase() {
+    var elem = document.getElementById('number').innerText;
+    elem++;
+    document.getElementById('number').innerText=elem
+}
+function decrease() {
+    var elem = document.getElementById('number').innerText;
+    elem--;
+    document.getElementById('number').innerText=elem
+    
+}
+
+
+
+
+
+
+//..................... END OF CHAPTER 43-48..................
+
+
+
+
+//..................... START OF CHAPTER 49-52................
+//Q NO 1
+function display() {
+    var first = document.getElementById('first').value;
+    var last = document.getElementById('last').value;
+    var  email= document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var p = document.createElement('h4');
+    p.innerHTML = "your First name is " + first;
+    document.body.appendChild(p);  
+    var p = document.createElement('h4');
+    p.innerHTML = "your Last name is: " + last;
+    document.body.appendChild(p);  
+    var p = document.createElement('h4');
+    p.innerHTML = "your email  is: " + email;
+    document.body.appendChild(p);  
+    var p = document.createElement('h4');
+    p.innerHTML = "your Password is " + password;
+    document.body.appendChild(p);  
+    
+    
+}
+//Q NO 2
+function readMore() {
+    var a = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident possimus tempore magni, quae saepe fugiat sit incidunt porro est facilis, dolores nihil debitis in laborum assumenda impedit reiciendis excepturi quo.Vero perferendis earum excepturiautem odio tempore accusamus maiores nam voluptatum. Numquam illo eius, omnis architecto quos consequatur explicabo ipsam, quaerat cum quae et fuga assumenda, suscipit totam quibusdam? Numquam?";
+    document.getElementById('text').innerHTML = a;
+    
+}
+//Q NO 3
+
+
+
+
+
+// ..................... END OF CHAPTER 49-52................
+
+
+
+
+
+
+
+
+
+
+
